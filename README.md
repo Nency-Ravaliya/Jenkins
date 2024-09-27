@@ -1,5 +1,117 @@
 # Jenkins -- Pro
 
+### 1. **Pipeline Fundamentals**
+   - **Declarative vs Scripted Pipelines**: Understand the syntax and structure of both.
+   - **Stages and Steps**: How to define different stages (build, test, deploy) in a pipeline.
+   - **Post Actions**: Use of post actions like `success`, `failure`, and `always` in pipelines.
+   - **Pipeline Triggers**: `cron`, `pollSCM`, `Git hooks` integration for scheduling builds.
+   - **Pipeline as Code (Jenkinsfile)**: Creating and managing pipelines through `Jenkinsfile`.
+   - **Multibranch Pipelines**: Automatically managing pipelines for multiple branches.
+
+### 2. **Jenkins Agents and Nodes**
+   - **Master-Agent Architecture**: Setting up master and agent nodes.
+   - **Labeling Nodes**: Assigning specific jobs to specific agents using node labels.
+   - **Connecting Nodes**: Using SSH or JNLP to connect agents.
+   - **Distributed Builds**: Running builds on multiple nodes.
+
+### 3. **Build Tools Integration**
+   - **Maven/Gradle Integration**: Configuring Jenkins jobs to run Maven/Gradle builds.
+   - **Docker Integration**: Running builds inside Docker containers.
+   - **Ant Integration**: For Java builds using Ant.
+   - **NPM/Yarn**: Integration with Node.js projects for frontend and backend.
+
+### 4. **SCM Integration**
+   - **GitHub, GitLab, Bitbucket Integration**: Configuring Jenkins to pull code from repositories.
+   - **Git Branching and Pull Requests**: Handling feature branches, merging pull requests.
+   - **Private Repositories**: Setting up credentials for private Git repositories.
+   - **SCM Polling and Webhooks**: Automatically triggering builds based on SCM changes.
+
+### 5. **Jenkins Plugins**
+   - **Essential Plugins**: Git plugin, Pipeline plugin, Docker plugin, Maven plugin, etc.
+   - **Credentials Plugin**: Managing credentials securely in Jenkins.
+   - **Notification Plugins**: Slack, Email notifications.
+   - **JUnit Plugin**: Parsing and displaying test results in Jenkins.
+
+### 6. **Jenkins Pipeline Syntax**
+   - **Environment Variables**: Setting and accessing environment variables in pipelines.
+   - **Credentials Management**: Using credentials securely in pipelines (e.g., `withCredentials` block).
+   - **Parallel Execution**: Running stages in parallel for faster builds.
+   - **Shared Libraries**: Using shared pipeline libraries to centralize common pipeline code.
+   - **Input/Approval**: Using `input` step for manual approval during the pipeline.
+
+### 7. **Groovy Scripting**
+   - **Why Groovy in Jenkins?**: Groovy is used for scripting within pipelines.
+   - **Basic Groovy Syntax**: Loops, conditions, and function definitions.
+   - **Writing Shared Libraries**: Creating reusable pipeline scripts using Groovy.
+   - **Try-Catch Blocks**: Using Groovy for error handling in pipelines.
+
+### 8. **Job Management**
+   - **Freestyle Jobs**: Setting up and configuring basic Jenkins jobs.
+   - **Parameterized Jobs**: Creating jobs with parameters (string, choice, boolean).
+   - **Pipeline Jobs**: Configuring jobs that run Jenkinsfiles.
+   - **Build Triggers**: Automatically triggering jobs (e.g., SCM changes, scheduled jobs).
+   - **Build Artifacts**: Archiving build artifacts and accessing them post-build.
+
+### 9. **Jenkins Security**
+   - **User Roles and Permissions**: Role-based access control (RBAC).
+   - **Securing Credentials**: How to store and manage secrets (e.g., API keys, passwords).
+   - **SSH Key Setup**: Configuring Jenkins with SSH keys for Git-based operations.
+   - **Jenkins Global Security**: Authentication, Authorization, and Security Matrix.
+
+### 10. **CI/CD Concepts**
+   - **Continuous Integration (CI)**: Automatically building and testing on code changes.
+   - **Continuous Delivery (CD)**: Automatically deploying to staging/production after tests pass.
+   - **Blue/Green Deployment**: Understanding deployment strategies and how Jenkins pipelines can facilitate these.
+   - **Rolling Updates**: Deploying applications gradually, one part at a time.
+   - **Docker-Based Pipelines**: Using Docker containers for CI/CD in Jenkins.
+
+### 11. **Handling Notifications**
+   - **Email Notifications**: Setting up email notifications for build status (success/failure).
+   - **Slack Notifications**: Using the Slack plugin to send notifications to a Slack channel.
+   - **Build Badges**: Showing the build status with badges (e.g., on GitHub).
+
+### 12. **Pipeline Parallelization and Conditional Execution**
+   - **Parallel Stages**: Running multiple stages simultaneously for faster execution.
+   - **When Conditionals**: Adding conditionals for stage execution (e.g., only on certain branches).
+
+### 13. **Artifact Management**
+   - **Archiving Artifacts**: Storing and accessing build artifacts (e.g., `.war`, `.jar` files).
+   - **Stashing and Unstashing**: Transferring files between stages.
+   - **Publishing to Artifact Repositories**: Deploying build artifacts to Nexus or Artifactory.
+
+### 14. **Jenkins as Code**
+   - **Infrastructure as Code (IaC)**: Managing Jenkins configurations as code.
+   - **Jenkins Configuration as Code (JCasC)**: Managing Jenkins system configurations as YAML code.
+
+### 15. **Backup and Restore Jenkins**
+   - **Backing Up Jenkins**: How to back up jobs, configurations, and plugins.
+   - **Restoring Jenkins**: Restoring Jenkins from backup.
+
+---
+
+### Groovy in Jenkins:
+- **Why Groovy?**: Groovy is used in Jenkins because it is a powerful scripting language that allows complex automation, especially for creating pipelines.
+- **How to Use**: Groovy is used within the `Jenkinsfile` to write custom logic, control flows, and functions. It can handle error handling (`try-catch`), loops, and more.
+- **Groovy in Declarative Pipelines**: Although declarative pipelines aim to limit scripting, certain logic (like looping, custom conditions) is still handled with Groovy.
+- **Groovy in Scripted Pipelines**: In scripted pipelines, Groovy is fully integrated, allowing a higher degree of flexibility and customization.
+
+---
+
+### Ansible:
+For your **Ansible practical viva**, expect topics like:
+- **Inventory Management**: Handling static and dynamic inventories.
+- **Ad-Hoc Commands**: Running commands directly against hosts (e.g., `ansible all -m ping`).
+- **Playbooks**: Writing and managing Ansible playbooks.
+- **Roles**: Organizing playbooks with roles.
+- **Handlers**: Setting up tasks that only run when triggered by other tasks.
+- **Templates**: Using Jinja2 templates for dynamic configuration.
+- **Facts and Variables**: Gathering facts and using variables.
+- **Conditionals and Loops**: Conditional task execution and loops in playbooks.
+- **Vault**: Encrypting sensitive data with `ansible-vault`.
+- **Modules**: Familiarity with essential Ansible modules like `yum`, `apt`, `copy`, `command`, `service`, `shell`, and `file`.
+  
+---
+
 ## 1. Declarative vs. Scripted Pipelines
 
 ### Declarative Pipelines
