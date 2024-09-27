@@ -698,3 +698,224 @@ pipeline {
 
 By integrating various build tools such as Maven, Gradle, Docker, Ant, and NPM/Yarn with Jenkins, you can automate and streamline your build and deployment processes. This integration enhances the development workflow, increases efficiency, and helps ensure consistent builds across different environments. Each tool has its specific configurations and benefits, so choose the ones that best fit your project needs.
 
+---
+
+Here’s a list of common build goals for **Maven**, **Gradle**, **Ant**, **NPM**, and **Yarn**, along with examples for each:
+
+### Maven Goals with Examples
+
+1. **clean**:
+   - **Description**: Removes the `target` directory.
+   - **Example**: 
+     ```bash
+     mvn clean
+     ```
+
+2. **install**:
+   - **Description**: Compiles the code and installs the artifact into the local repository.
+   - **Example**: 
+     ```bash
+     mvn install
+     ```
+
+3. **package**:
+   - **Description**: Compiles the code and packages it into its distributable format (JAR/WAR).
+   - **Example**: 
+     ```bash
+     mvn package
+     ```
+
+4. **test**:
+   - **Description**: Runs the tests defined in the project.
+   - **Example**: 
+     ```bash
+     mvn test
+     ```
+
+5. **validate**:
+   - **Description**: Validates the project structure and configuration.
+   - **Example**: 
+     ```bash
+     mvn validate
+     ```
+
+6. **deploy**:
+   - **Description**: Copies the packaged artifact to the remote repository.
+   - **Example**: 
+     ```bash
+     mvn deploy
+     ```
+
+7. **site**:
+   - **Description**: Generates site documentation for the project.
+   - **Example**: 
+     ```bash
+     mvn site
+     ```
+
+---
+
+### Gradle Goals (Tasks) with Examples
+
+1. **build**:
+   - **Description**: Assembles and tests the project, creating the final artifacts.
+   - **Example**: 
+     ```bash
+     gradle build
+     ```
+
+2. **clean**:
+   - **Description**: Deletes the build directory (usually `build/`).
+   - **Example**: 
+     ```bash
+     gradle clean
+     ```
+
+3. **assemble**:
+   - **Description**: Creates the outputs without running tests.
+   - **Example**: 
+     ```bash
+     gradle assemble
+     ```
+
+4. **check**:
+   - **Description**: Runs all checks, including tests and style checks.
+   - **Example**: 
+     ```bash
+     gradle check
+     ```
+
+5. **test**:
+   - **Description**: Runs the unit tests for the project.
+   - **Example**: 
+     ```bash
+     gradle test
+     ```
+
+6. **deploy**:
+   - **Description**: Copies the artifacts to a repository for sharing.
+   - **Example**: 
+     ```bash
+     gradle deploy
+     ```
+
+---
+
+### Ant Targets with Examples
+
+1. **clean**:
+   - **Description**: Deletes previously compiled files and directories.
+   - **Example**: 
+     ```bash
+     ant clean
+     ```
+
+2. **compile**:
+   - **Description**: Compiles the source code into binary files.
+   - **Example**: 
+     ```bash
+     ant compile
+     ```
+
+3. **jar**:
+   - **Description**: Packages the compiled classes into a JAR file.
+   - **Example**: 
+     ```bash
+     ant jar
+     ```
+
+4. **test**:
+   - **Description**: Runs unit tests defined in the project.
+   - **Example**: 
+     ```bash
+     ant test
+     ```
+
+5. **dist**:
+   - **Description**: Creates a distribution of the application.
+   - **Example**: 
+     ```bash
+     ant dist
+     ```
+
+---
+
+### NPM Commands with Examples
+
+1. **install**:
+   - **Description**: Installs the dependencies listed in `package.json`.
+   - **Example**: 
+     ```bash
+     npm install
+     ```
+
+2. **run <script>**:
+   - **Description**: Executes a specified script defined in `package.json`.
+   - **Example**: 
+     ```bash
+     npm run test
+     ```
+
+3. **test**:
+   - **Description**: Runs the test script defined in `package.json`.
+   - **Example**: 
+     ```bash
+     npm test
+     ```
+
+4. **build**:
+   - **Description**: Compiles and prepares the application for production.
+   - **Example**: 
+     ```bash
+     npm run build
+     ```
+
+5. **start**:
+   - **Description**: Starts the application.
+   - **Example**: 
+     ```bash
+     npm start
+     ```
+
+---
+
+### Yarn Commands with Examples
+
+1. **install**:
+   - **Description**: Installs the dependencies listed in `package.json`.
+   - **Example**: 
+     ```bash
+     yarn install
+     ```
+
+2. **run <script>**:
+   - **Description**: Executes a specified script defined in `package.json`.
+   - **Example**: 
+     ```bash
+     yarn run test
+     ```
+
+3. **test**:
+   - **Description**: Runs the test script defined in `package.json`.
+   - **Example**: 
+     ```bash
+     yarn test
+     ```
+
+4. **build**:
+   - **Description**: Compiles and prepares the application for production.
+   - **Example**: 
+     ```bash
+     yarn build
+     ```
+
+5. **start**:
+   - **Description**: Starts the application.
+   - **Example**: 
+     ```bash
+     yarn start
+     ```
+
+---
+
+This should give you a comprehensive overview of the common goals and commands for each build tool, along with practical examples for each one!
