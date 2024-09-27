@@ -285,10 +285,9 @@ pipeline {
 
 By understanding these fundamental concepts of Jenkins Pipelines, you can effectively automate your CI/CD processes and manage your application development lifecycle. Whether using Declarative or Scripted syntax, leveraging stages, post actions, triggers, and multibranch management will empower you to build robust, automated workflows tailored to your needs.
 
+---
 
 In Jenkins, the **Master-Agent architecture** allows you to distribute your build workload across multiple machines. This architecture consists of a master node that manages the Jenkins environment and one or more agent nodes (also known as slaves) that perform the actual build tasks. Here’s a detailed overview of Jenkins Agents and Nodes, including how to set up a master-agent architecture, label nodes, connect nodes, and manage distributed builds.
-
----
 
 ## 1. Master-Agent Architecture
 
